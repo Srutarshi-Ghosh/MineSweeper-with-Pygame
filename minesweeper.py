@@ -53,9 +53,9 @@ def get_board(size=15):
         board[x][y] = 'B'
         bomb_pos.append((x, y))
 
-    print_board(board)
+    # print_board(board)
     bomb_pos.sort()
-    print(bomb_pos)
+    # print(bomb_pos)
 
     score = 0
     for i in range(size):
@@ -70,8 +70,8 @@ def get_board(size=15):
                 board[i][j] = str(no)
                 score += no
 
-    print_board(board)
-    print(score)
+    # print_board(board)
+    # print(score)
     return board, bomb_pos, score
 
 
@@ -194,7 +194,7 @@ while running:
         if not gameover and event.type == pygame.MOUSEBUTTONDOWN:
             x = (event.pos[0]) // SQUARE
             y = (event.pos[1] - XTRA) // SQUARE
-            print(x, y)
+            # print(x, y)
             if event.button == 1:
                 gameover = b.move(x, y)
             else:
